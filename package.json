@@ -1,0 +1,17 @@
+{
+  "name": "canops",
+  "version": "1.0.0",
+  "private": true,
+  "workspaces": ["backend", "web", "mobile"],
+  "scripts": {
+    "dev:backend": "npm run dev --workspace=backend",
+    "dev:web": "npm run dev --workspace=web",
+    "dev:all": "concurrently \"npm run dev:backend\" \"npm run dev:web\"",
+    "install:all": "npm install --workspaces",
+    "build:web": "npm run build --workspace=web",
+    "build:backend": "npm run build --workspace=backend"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
